@@ -1,0 +1,17 @@
+body{
+font-family: 'Titillium Web', sans-serif;
+}
+
+.navbar{
+    background-color: #0f0e0e;
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0);
+    min-height: 100px;
+}
+
+.nav-link{
+    color: #ffffff
+}
+
+.navbar-brand{
+    color: #ffffff
+}
