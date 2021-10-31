@@ -15,3 +15,11 @@ font-family: 'Titillium Web', sans-serif;
 .navbar-brand{
     color: #ffffff
 }
+
+.img-responsive{
+    height: 85px;
+}
+
+.img-responsive2{
+    height: 100px;
+}
