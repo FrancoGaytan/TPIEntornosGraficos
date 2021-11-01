@@ -5,6 +5,8 @@
     include('templates/header.php')
 ?>
 
+<h2>Registro Docente</h2>
+    
 <form>
     <div class="form-group">
         <label for="exampleInputNombre">Nombre</label>
