@@ -23,3 +23,41 @@ font-family: 'Titillium Web', sans-serif;
 .img-responsive2{
     height: 100px;
 }
+
+.form-group{
+
+    padding-top: 20px;
+    justify-content: center;
+    max-width: 900px;
+    padding-left: 30%;
+    align-content: center;
+}
+
+.form-check{
+
+    padding-left: 32%;
+    padding-right: 32%;
+    padding-top: 20px;
+}
+
+.btn-primary{
+    align-content: center;
+    padding-left: 40%;
+    padding-top: 10;
+    text-align: center;
+
+}
+
+#nombreHelp {
+    padding-top: 5%;
+}
+
+h2{
+    padding-left: 40%;
+    align-content: center;
+    padding-top: 5%;
+}
+
+.text-uppercase{
+    padding-top: 25px;
+}
