@@ -5,7 +5,8 @@
     include('templates/header.php')
 ?>
 
-
+<link href="css/estilos.css" rel="stylesheet">
+    
 <form>
     <div class="titulo">
         <h2>Inicio de sesión</h2>
