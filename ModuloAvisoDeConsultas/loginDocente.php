@@ -5,6 +5,7 @@
     include('templates/header.php')
 ?>
 
+<link href="css/estilos.css" rel="stylesheet">
 
 <form>
     <div class="titulo">
