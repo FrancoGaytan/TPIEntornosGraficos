@@ -1,7 +1,6 @@
 body{
     height: 100%; 
     font-family: 'Noto Sans', sans-serif;
-    background-color: #ab4493; 
   }
   
   
@@ -24,7 +23,7 @@ body{
     border-radius: 5px;  
     border-style: solid; 
     border-width: 1px; 
-    border-color: #ab4493; 
+    border-color: #6711d8; 
     margin-top: 10px;  
     padding-left: 10px;
     margin-bottom: 20px; 
@@ -38,7 +37,7 @@ body{
     border-radius: 5px;  
     border-style: solid; 
     border-width: 1px; 
-    border-color: #ab4493; 
+    border-color: #6711d8; 
     margin-top: 10px;  
     padding-left: 10px;
     margin-bottom: 20px; 
@@ -59,8 +58,8 @@ body{
     margin-bottom: 20px; 
     margin-top: 10px;   
     text-transform: uppercase;
-    background-color: #ab4493; 
-    border-color: #ab4493; 
+    background-color: #070ac2; 
+    border-color: #070ac2; 
     border-style: solid; 
     border-radius: 10px;  
     width: 420px;   
@@ -74,7 +73,7 @@ body{
   
   
   span{
-    color: #ab4493; 
+    color: #070ac2; 
   }
   
   
@@ -88,7 +87,7 @@ body{
     font-size: 39px;  
     text-align: letf; 
     padding-bottom: 20px; 
-    color: #ab4493;
+    color: #070ac2;
   }
   
   
@@ -125,4 +124,23 @@ body{
     outline:0;
     border: 1px solid #97d848;
   }
+
+  * {
+    margin:0;
+    padding:0;
+    }
+    #columna1 {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:200px;
+    margin-top:10px;
+    background-color:#ffff55;
+    }
+    #columna2 {
+    margin-left:220px;
+    margin-right:20px;
+    margin-top:10px;
+    background-color:#ffffbb;
+    }
   

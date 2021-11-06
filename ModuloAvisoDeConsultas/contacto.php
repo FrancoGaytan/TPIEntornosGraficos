@@ -10,11 +10,12 @@
 <link href="css/formulario.css" rel="stylesheet">
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <form action="envioFormulario.php" method="post">
-        <div class="titulo">
+  <div id="column1" class="contact_form formulario" style="background-color:#aaa;">
+    <div class="titulo">
             <h2>Contacto</h2>
-        </div>  
+    </div>  
+    <form action="envioFormulario.php" method="post">
+        
         <p>
         <label for="nombre" class="colocar_nombre">Nombre
             <span class="obligatorio">*</span>
@@ -62,7 +63,7 @@
         </p>  
     </form>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div id="column2" style="background-color:#bbb;">
     <div class="ubicacionUTN" style="background-color:rgba(0, 0, 0, 0);">
         <a  href="https://www.google.com/maps/place/Universidad+Tecnol%C3%B3gica+Nacional+%7C+Facultad+Regional+Rosario/@-32.9544347,-60.6437319,15z/data=!4m5!3m4!1s0x0:0x11f1d3d54f950dd0!8m2!3d-32.9544347!4d-60.6437319"><img class="img-responsive" src="img/utnUbicacion.jpg" data-bs-hover-animate="pulse"></a>
     </div>
