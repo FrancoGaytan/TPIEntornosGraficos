@@ -10,7 +10,12 @@
         <div class="titulo">
             <h2>Listado de Consultas</h2>
         </div>
-
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Buscar Materia</option>
+            <option value="1">Entornos Graficos</option>
+            <option value="2">Analisis Matematico</option>
+            <option value="3">Fisica 2</option>
+        </select>
         <table class="table table-striped">
         <thead>
             <tr>
