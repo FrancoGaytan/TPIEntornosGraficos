@@ -5,9 +5,8 @@
     include('templates/header.php')
 ?>
 
-<link href="css/estilos.css" rel="stylesheet">
 
-<form>
+<form action="validarDocente.php" method="post">
     <div class="titulo">
         <h2>Inicio de sesión</h2>
     </div>
@@ -21,16 +20,14 @@
         <label class="form-check-label" for="inlineRadio2">Docente</label>
     </div>
 
-
-
     <div class="form-group">
       <label for="exampleInputEmail1">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
     </div>
 
     <div class="form-group">
       <label for="exampleInputContraseña">Contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+      <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
     </div>
 
     <div class="form-check">
