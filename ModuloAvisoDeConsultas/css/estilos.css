@@ -1,5 +1,6 @@
 body{
 font-family: 'Titillium Web', sans-serif;
+height: 100%;
 }
 
 .navbar{
@@ -59,4 +60,8 @@ h2{
 
 .text-uppercase{
     padding-top: 25px;
+}
+
+.container{
+    padding-top: 10%;
 }

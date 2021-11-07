@@ -1,25 +1,27 @@
 <?php
 $email=$_POST['email'];
-$contraseña=$_POST['contraseña'];
+$contraseña=$_POST['contrasenia'];
 session_start();
-$_SESSION['email']=$email;
 
 include('db.php');
 
-$consulta="SELECT * FROM profesores WHERE email='$email' and contraseña='$contraseña'";
-$resultado=mysqli_query($conexion,$consulta);
+$consulta="SELECT * FROM profesores WHERE email='$email' and contrasenia='$contraseña'";
+$resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 
-$filas=mysqli_num_rows($resultado==0);
+$fila=mysqli_fetch_array($resultado);
 
-if($filas){
+if(mysqli_num_rows($resultado) > 0){
+    $_SESSION['email']=$email;
+    $_SESSION['esDocente']=true;
     header("location: listadoConsultas.php");
 }else{
-    ?>
-    <?php
+    echo '<div class="alert alert-danger" role="alert">
+    Error en la autenticación
+    </div>';
     include("loginDocente.php");
-    ?>
-    <h1 class="bad">Error en la autenticacion</h1>
-    <?php
 }
+
 mysqli_free_result($resultado);
 mysqli_close($conexion);
+
+?>

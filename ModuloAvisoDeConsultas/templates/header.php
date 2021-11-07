@@ -29,22 +29,18 @@
              </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="Horarios">Horarios</a>
+                        <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Registro Consultas</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"id="IngresoAlumnos">Ingreso Alumno</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>
+                        <a class="nav-link" href="./regConsulta.php">Registro Consultas</a>
                     </li>
                 </ul>
+                <div class="d-flex align-items-center">
+                <a class="nav-link" href="./inicioSesion.php" id="Ingresar">Ingresar</a>
+                <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>
+                </div> 
             </div>
         </div>
     </nav>

@@ -7,28 +7,15 @@
 
 <link href="css/estilos.css" rel="stylesheet">
     
-<form>
+<form action="" method="post">
     <div class="titulo">
         <h2>Inicio de sesión</h2>
     </div>
-
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"checked>
-        <label class="form-check-label" for="inlineRadio1">Alumno</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" >
-        <label class="form-check-label" for="inlineRadio2">Docente</label>
-    </div>
-
-
 
     <div class="form-group">
       <label for="exampleInputEmail1">Email</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
     </div>
-
-    
     
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">

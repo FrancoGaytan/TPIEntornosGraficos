@@ -24,7 +24,7 @@
                         Alumno
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Listado de Consultas</a>
+                        <a href="./listadoConsultas.php" class="text-reset">Listado de Consultas</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Mi Perfil</a>
@@ -38,10 +38,10 @@
                         Docente
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Registro de Consulta</a>
+                        <a href="./regConsulta.php" class="text-reset">Registro de Consulta</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Mis Consultas</a>
+                        <a href="./misConsultasDoc.php" class="text-reset">Mis Consultas</a>
                     </p>
 
                 </div>
@@ -53,7 +53,7 @@
                     </h6>
 
                     <p>
-                        <a href="#!" class="text-reset">Contacto</a>
+                        <a href="./contacto.php" class="text-reset">Contacto</a>
                     </p>
 
                     <p>
