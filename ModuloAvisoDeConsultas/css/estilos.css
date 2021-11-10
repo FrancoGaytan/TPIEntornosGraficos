@@ -65,3 +65,15 @@ h2{
 .container{
     padding-top: 10%;
 }
+
+form{
+    max-width: 40%;
+}
+
+.formulario{
+    width: 500px;
+}
+
+.contenido{
+    display: flex;justify-content: center;
+}
