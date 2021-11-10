@@ -10,7 +10,7 @@
 
 <div class="container">
     <section class="main row" style="background-color:rgba(0, 0, 0, 0);">
-        <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-6">
             <div class="titulo">
                 <h2>Contacto</h2>
             </div>  
@@ -62,14 +62,13 @@
                 <span class="obligatorio"> * </span>los campos son obligatorios.
                 </p>  
             </form>
-        </article>
+        </div>
 
-        <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-6">
         <div class="container">
             <div class="ubicacionUTN" style="background-color:rgba(0, 0, 0, 0);">
-                <a  href="https://www.google.com/maps/place/Universidad+Tecnol%C3%B3gica+Nacional+%7C+Facultad+Regional+Rosario/@-32.9544347,-60.6437319,15z/data=!4m5!3m4!1s0x0:0x11f1d3d54f950dd0!8m2!3d-32.9544347!4d-60.6437319">
-                    <img class="img-responsive" src="img/utnUbicacion.jpg" data-bs-hover-animate="pulse" width="100%" height="2000px">
-                </a>
+                <br><br><br>
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="450" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=zeballos%201341%20Rosario&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">copy google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
             </div>
         </div>
         </aside>
