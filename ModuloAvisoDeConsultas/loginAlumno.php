@@ -9,7 +9,7 @@
     
 <form action="" method="post">
     <div class="titulo">
-        <h2>Inicio de sesión</h2>
+        <h2>Validación</h2>
     </div>
 
     <div class="form-group">
