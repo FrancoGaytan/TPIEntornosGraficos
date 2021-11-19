@@ -7,14 +7,14 @@
 
 <link href="css/estilos.css" rel="stylesheet">
     
-<form action="" method="post">
+<form action="validarAlumno.php" method="post">
     <div class="titulo">
-        <h2>Validación</h2>
+        <h2>Ingreso alumno</h2>
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
     </div>
     
     <div class="form-check">
