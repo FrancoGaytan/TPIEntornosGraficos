@@ -25,12 +25,12 @@
                         <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./regConsulta.php" id="registroConsultas">registro Consultas</a>
+                        <a class="nav-link" href="./regConsulta.php" id="registroConsultas">Registro Consultas</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./loginAlumno.php"id="IngresoAlumnos">Ingreso Alumno</a>
+                        <a class="nav-link" href="./inicioSesion.php"id="Ingreso">Ingreso</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>

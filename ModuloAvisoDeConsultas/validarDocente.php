@@ -1,7 +1,8 @@
 <?php
 $email=$_POST['email'];
 $contraseña=$_POST['contrasenia'];
-session_start();
+
+session_destroy();
 
 include('db.php');
 
@@ -11,6 +12,8 @@ $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 $fila=mysqli_fetch_array($resultado);
 
 if(mysqli_num_rows($resultado) > 0){
+    if (!session_id())
+        session_start();
     $_SESSION['email']=$email;
     $_SESSION['esDocente']=true;
     header("location: listadoConsultas.php");

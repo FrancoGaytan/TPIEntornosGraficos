@@ -1,3 +1,7 @@
+<?php
+    include('restringidoDocente.php')
+?>
+
 <!doctype html>
 <html lang="en">
 

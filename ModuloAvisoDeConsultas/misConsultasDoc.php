@@ -2,6 +2,10 @@
 <html lang="en">
 
 <?php
+    include('restringidoDocente.php')
+?>
+
+<?php
     include('templates/header.php')
 ?>
 
