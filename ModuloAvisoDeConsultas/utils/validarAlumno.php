@@ -1,3 +1,4 @@
+
 <?php
 $email=$_POST['email'];
 
@@ -13,6 +14,9 @@ $fila=mysqli_fetch_array($resultado);
 
 if(mysqli_num_rows($resultado) > 0){
     $_SESSION['email']=$email;
+    $_SESSION['legajo']=$fila['legajo'];
+    $_SESSION['nombre']=$fila['nombre'];
+    $_SESSION['apellido']=$fila['apellido'];
     $_SESSION['esAlumno']=true;
     $_SESSION['esDocente']=false;
     header("location: ../listadoConsultas.php");
