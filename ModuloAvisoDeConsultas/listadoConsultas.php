@@ -24,7 +24,7 @@
             <h2>Listado de Consultas</h2>
         </div>
         <div class="titulo">
-            <h4>Hola <?php echo $_SESSION['email'] ?>!</h4>
+            <h4>Bienvenido <?php echo $_SESSION['nombre']; echo ' '; echo $_SESSION['apellido'] ?>!</h4>
         </div>
         <select class="form-select" aria-label="Default select example">
             <option selected>Buscar Materia</option>
