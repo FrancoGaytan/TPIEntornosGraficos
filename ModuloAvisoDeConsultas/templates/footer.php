@@ -27,7 +27,7 @@
                         <a href="./listadoConsultas.php" class="text-reset">Listado de Consultas</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Mi Perfil</a>
+                        <a href="./perfilAlumno.php" class="text-reset">Mi Perfil</a>
                     </p>
 
                 </div>
