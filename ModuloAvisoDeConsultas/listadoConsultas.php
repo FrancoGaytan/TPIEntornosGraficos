@@ -2,7 +2,16 @@
 <html lang="en">
 
 <?php
-    include('restringidoAlumno.php')
+    include_once('utils/isSessionStarted.php');
+
+    include('utils/restringidoAlumno.php');
+
+    echo session_status();
+
+    echo "<h3> PHP List All Session Variables</h3>";
+    foreach ($_SESSION as $key=>$val)
+    echo $key." ".$val."<br/>";
+
 ?>
 
 <?php
@@ -13,6 +22,9 @@
     <form>
         <div class="titulo">
             <h2>Listado de Consultas</h2>
+        </div>
+        <div class="titulo">
+            <h4>Hola <?php echo $_SESSION['email'] ?>!</h4>
         </div>
         <select class="form-select" aria-label="Default select example">
             <option selected>Buscar Materia</option>

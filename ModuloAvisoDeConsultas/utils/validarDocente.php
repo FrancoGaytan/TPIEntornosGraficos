@@ -1,0 +1,30 @@
+<?php
+$email=$_POST['email'];
+$contraseña=$_POST['contrasenia'];
+
+include_once('destroySession.php');
+include_once('isSessionStarted.php');
+
+include('db.php');
+
+$consulta="SELECT * FROM profesores WHERE email='$email' and contrasenia='$contraseña'";
+$resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
+
+$fila=mysqli_fetch_array($resultado);
+
+if(mysqli_num_rows($resultado) > 0){
+    $_SESSION['email']=$email;
+    $_SESSION['esDocente']=true;
+    $_SESSION['esAlumno']=false;
+    header("location: ../regConsulta.php");
+}else{
+    echo '<div class="alert alert-danger" role="alert">
+    Error en la autenticación
+    </div>';
+    include("../loginDocente.php");
+}
+
+mysqli_free_result($resultado);
+mysqli_close($conexion);
+
+?>

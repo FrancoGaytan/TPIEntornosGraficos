@@ -7,7 +7,7 @@
 
 <link href="css/estilos.css" rel="stylesheet">
     
-<form action="validarAlumno.php" method="post">
+<form action="utils/validarAlumno.php" method="post">
     <div class="titulo">
         <h2>Ingreso alumno</h2>
     </div>

@@ -1,5 +1,5 @@
 <?php
-    include('restringidoDocente.php')
+    include('utils/restringidoDocente.php')
 ?>
 
 <!doctype html>
