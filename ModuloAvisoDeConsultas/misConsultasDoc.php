@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include('utils/restringidoDocente.php')
+    include('./restringidoDocente.php')
 ?>
 
 <?php

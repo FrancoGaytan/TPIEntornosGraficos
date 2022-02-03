@@ -6,7 +6,7 @@
 ?>
 
 <div class="contenido">
-  <form action="utils/validarDocente.php" method="post" class="formulario">
+  <form action="./validarDocente.php" method="post" class="formulario">
       <div class="titulo">
           <h2>Inicio de sesión</h2>
       </div>

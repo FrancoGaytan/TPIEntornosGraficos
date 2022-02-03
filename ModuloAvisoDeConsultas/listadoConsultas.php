@@ -2,9 +2,9 @@
 <html lang="en">
 
 <?php
-    include_once('utils/isSessionStarted.php');
+    include_once('./isSessionStarted.php');
 
-    include('utils/restringidoAlumno.php');
+    include('./restringidoAlumno.php');
 
     echo session_status();
 

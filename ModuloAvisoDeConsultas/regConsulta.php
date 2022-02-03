@@ -1,5 +1,5 @@
 <?php
-    include('utils/restringidoDocente.php')
+    include('./restringidoDocente.php')
 ?>
 
 <!doctype html>
@@ -14,7 +14,7 @@
 
 
 <div class="contenido">
-  <form action="utils/registrarConsulta.php" method="post" class="formulario">
+  <form action="./registrarConsulta.php" method="post" class="formulario">
       <div class="titulo">
           <h2>Registro de Nueva Consulta</h2>
       </div>

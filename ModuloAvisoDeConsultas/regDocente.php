@@ -6,7 +6,7 @@
 ?>
 
 <div class="contenido">
-  <form action= "utils/registrarDocente.php" method="post" class="formulario">
+  <form action= "./registrarDocente.php" method="post" class="formulario">
       
       <div class="titulo">
           <h2>Registro Docente</h2>
