@@ -40,14 +40,10 @@
         ?>
 
         <select class="form-select" aria-label="Default select example">
-            <option selected>Buscar Materia</option>
-            <option value="1">Fisica II</option>
-            <option value="2">Diseño de Sistemas</option>
-            <option value="3">Comunicaciones</option>
-            <option value="4">Redes</option>
-            <option value="5">Investigacion Operativa</option>
-            <option value="6">Simulacion</option>
-            <option value="7">Entornos Graficos</option>
+            <option disabled selected>Selecciona la materia</option>
+            <?php
+            include('getAllMaterias.php')
+            ?>
         </select>
         <table class="table table-striped">
         <thead>
@@ -59,24 +55,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td><button type="button" class="btn btn-outline-secondary">Inscribirse</button></td>
-                <td><p>Profesor: XX</p><p>Cupos Disponibles: XX</p><p>Día de consulta: XX/XX/XXXX <?php/* echo $fila["fecha_consulta"]*/?></p></td>
-                <td>XX:XX hs</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td><button type="button" class="btn btn-outline-secondary">Inscribirse</button></td>
-                <td><p>Profesor: XX</p><p>Cupos Disponibles: XX</p><p>Día de consulta: XX/XX/XXXX</p></td>
-                <td>XX:XX hs</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td><button type="button" class="btn btn-outline-secondary">Inscribirse</button></td>
-                <td><p>Profesor: XX</p><p>Cupos Disponibles: XX</p><p>Día de consulta: XX/XX/XXXX</p></td>
-                <td>XX:XX hs</td>
-            </tr>
+            <?php
+            include('getAllConsultas.php')
+            ?>
         </tbody>
         </table>
     </form>
