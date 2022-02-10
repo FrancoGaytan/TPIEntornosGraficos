@@ -12,14 +12,22 @@ if ($resultado->num_rows > 0) {
         $fechaHora = DateTime::createFromFormat($formatoInput, $row["fecha_hora"]);
         $hora = $fechaHora -> format('H:i');
         $fecha = $fechaHora -> format('d-m-Y');
-        echo "
-            <tr>
-                <th scope='row'></th>
-                <td><button type='button' class='btn btn-outline-secondary'>Seleccionar</button></td>
-                <td><p>Profesor: " . $row["id_profesor"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
-                <td><b>" . $hora . "</b></td>
-            </tr>
-        ";
+
+
+        $legProf = $row["id_profesor"];
+        $consulta2="SELECT nombre, apellido FROM profesores WHERE legajo = {$legProf};";
+        $resultado2=mysqli_query($conexion,$consulta2) or die (mysqli_error($conexion));
+
+        while($row2 = $resultado2->fetch_assoc()) {
+            echo "
+                <tr>
+                    <th scope='row'></th>
+                    <td><button type='button' class='btn btn-outline-secondary'>Seleccionar</button></td>
+                    <td><p>Profesor: " . $row2["nombre"], $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
+                    <td><b>" . $hora . "</b></td>
+                </tr>
+            ";
+        }    
     }
 }
 else {
