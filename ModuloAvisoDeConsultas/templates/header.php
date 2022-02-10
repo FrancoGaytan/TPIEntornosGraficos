@@ -20,7 +20,7 @@
                 <img alt="Logo UTN" src="img/logo2.png" width="120" height="90">
              </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
                     </li>
@@ -28,14 +28,16 @@
                         <a class="nav-link" href="./regConsulta.php" id="registroConsultas">Registro Consultas</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./inicioSesion.php"id="Ingreso">Ingreso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>
-                    </li>
-                </ul>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./inicioSesion.php"id="Ingreso">Ingreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
