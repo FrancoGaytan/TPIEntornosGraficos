@@ -22,7 +22,14 @@ if ($resultado->num_rows > 0) {
     }
 }
 else {
-    echo "<option disabled value=''>No existen materias cargadas</option>";
+    echo "
+        <tr>
+            <th scope='row'></th>
+            <td></td>
+            <td><b>No hay consultas disponibles</b></td>
+            <td></td>
+        </tr>
+    ";
 }
 
 ?>
