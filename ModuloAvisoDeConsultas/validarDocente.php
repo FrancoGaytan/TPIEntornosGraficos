@@ -2,7 +2,8 @@
 $email=$_POST['email'];
 $contraseña=$_POST['contrasenia'];
 
-session_destroy();
+include_once('destroySession.php');
+include_once('isSessionStarted.php');
 
 include('db.php');
 
@@ -12,8 +13,6 @@ $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 $fila=mysqli_fetch_array($resultado);
 
 if(mysqli_num_rows($resultado) > 0){
-    if (!session_id())
-        session_start();
     $_SESSION['email']=$email;
     $_SESSION['legajo']=$fila['legajo'];
     $_SESSION['nombre']=$fila['nombre'];

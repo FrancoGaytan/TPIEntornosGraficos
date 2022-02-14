@@ -22,7 +22,7 @@ if ($resultado->num_rows > 0) {
                 <tr>
                     <th scope='row'></th>
                     <td><button type='button' class='btn btn-outline-secondary'>Inscribirse</button></td>
-                    <td><p>Profesor: " . $row2["nombre"], $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
+                    <td><p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
                     <td><b>" . $hora . "</b></td>
                 </tr>
             ";

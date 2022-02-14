@@ -17,17 +17,22 @@ if ($resultado->num_rows > 0) {
         $legProf = $row["id_profesor"];
         $consulta2="SELECT nombre, apellido FROM profesores WHERE legajo = {$legProf};";
         $resultado2=mysqli_query($conexion,$consulta2) or die (mysqli_error($conexion));
+        $row2 = $resultado2->fetch_assoc();
 
-        while($row2 = $resultado2->fetch_assoc()) {
-            echo "
-                <tr>
-                    <th scope='row'></th>
-                    <td><button type='button' class='btn btn-outline-secondary'>Seleccionar</button></td>
-                    <td><p>Profesor: " . $row2["nombre"], $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
-                    <td><b>" . $hora . "</b></td>
-                </tr>
-            ";
-        }    
+        echo "
+            <tr>
+                <th scope='row'></th>
+                <td>
+                    <a onClick=\"javascript: return confirm('Estas seguro de eliminar la consulta ". $row['id'] . "?');\" href='blockConsulta.php?id=".$row['id']."'>Bloquear</a>
+                    <form action='./reprogramarConsulta.php' method='post'>
+                        <input type='hidden' name='id' value='" . $row["id"] . "'/><br>
+                        <input type='submit' value='Reprogramar' />
+                    </form>
+                </td>
+                <td><p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"] . "</p><b>Día de consulta: " . $fecha . "</b></td>
+                <td><b>" . $hora . "</b></td>
+            </tr>
+        ";
     }
 }
 else {
@@ -35,7 +40,7 @@ else {
         <tr>
             <th scope='row'></th>
             <td></td>
-            <td><b>No hay proximas consultas</b></td>
+            <td><b>No tiene consultas</b></td>
             <td></td>
         </tr>
     ";

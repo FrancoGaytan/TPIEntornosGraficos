@@ -25,39 +25,32 @@
 
         <aside class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
         <div class="container">
-                <form>
-                    <div class="titulo">
-                        <h2>Mis Proximas Consultas</h2>
-                    </div>
-                    <div class="btn-group">
-                        <td><button type="button" class="btn btn-outline-secondary">Bloquear</button></td>
-                        <td><button type="button" class="btn btn-outline-secondary">Reprogramar</button></td>
-                    </div>
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col">Consulta</th>
-                            <th scope="col">Horario</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            include('getMyConsultas.php')
-                            ?>
-                        </tbody>
-                    </table>
-                </form>
+                <div class="titulo">
+                    <h2>Mis Proximas Consultas</h2>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Consulta</th>
+                        <th scope="col">Horario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include('getMyConsultas.php')
+                        ?>
+                    </tbody>
+                </table>
 
             </div>
         </aside>
   
     </section>
 </div>
-
-
 
 <?php
     include('templates/footer.php')
