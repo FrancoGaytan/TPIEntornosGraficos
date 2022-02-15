@@ -19,7 +19,7 @@
             <h3><?php echo $_SESSION['nombre']; echo ' '; echo $_SESSION['apellido'] ?></h3>
             <h4>Legajo: <?php echo $_SESSION['legajo'] ?></h4>
             <p>Este es el parrafo de prueba de la pagina de consultas del docente donde estos pueden agregar informacion adicional para su perfil </p>
-            <td><button type="button" class="btn btn-outline-secondary">Historial de Consultas</button></td>
+            <td><button type="button" class="btn btn-outline-secondary" onclick="window.location.href = 'historialConsultasDoc.php'">Historial de Consultas </button></td>
 
         </article>
 
