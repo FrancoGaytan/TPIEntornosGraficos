@@ -21,7 +21,15 @@ if ($resultado->num_rows > 0) {
             echo "
                 <tr>
                     <th scope='row'></th>
-                    <td><button type='button' class='btn btn-outline-secondary'>Inscribirse</button></td>
+                    <td>
+            ";
+            if ($row["cupo"] > 0) {
+                echo "<a onClick=\"javascript: return confirm('Estas seguro que desea inscribirse a la consulta de " . $row2["nombre"], ' ', $row2["apellido"]. "?');\" href='inscribirAlumno.php?id=".$row['id']."'>Inscribirse</a>";
+            } else {
+                echo "<p>Consulta sin cupo</p>";
+            }
+            echo"
+                    </td>
                     <td><p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
                     <td><b>" . $hora . "</b></td>
                 </tr>
