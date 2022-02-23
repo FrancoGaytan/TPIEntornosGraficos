@@ -2,7 +2,7 @@
 
 include_once('isSessionStarted.php');
 
-$idConsulta=$_GET['idConsulta'];
+$idConsulta=$_GET['id'];
 $legajo=$_SESSION['legajo'];
 
 include('db.php');
