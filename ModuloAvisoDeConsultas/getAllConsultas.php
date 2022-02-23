@@ -18,22 +18,29 @@ if ($resultado->num_rows > 0) {
         $consulta2="SELECT nombre, apellido FROM profesores WHERE legajo = {$legProf};";
         $resultado2=mysqli_query($conexion,$consulta2) or die (mysqli_error($conexion));
         while($row2 = $resultado2->fetch_assoc()) {
-            echo "
-                <tr>
-                    <th scope='row'></th>
-                    <td>
-            ";
-            if ($row["cupo"] > 0) {
-                echo "<a onClick=\"javascript: return confirm('Estas seguro que desea inscribirse a la consulta de " . $row2["nombre"], ' ', $row2["apellido"]. "?');\" href='inscribirAlumno.php?id=".$row['id']."'>Inscribirse</a>";
-            } else {
-                echo "<p>Consulta sin cupo</p>";
+
+            $idMateria = $row["id_materia"];
+
+            $consulta3="SELECT nombre_materia FROM materias WHERE id = {$idMateria};";
+            $resultado3=mysqli_query($conexion,$consulta3) or die (mysqli_error($conexion));
+            while($row3 = $resultado3->fetch_assoc()) {
+                echo "
+                    <tr>
+                        <th scope='row'></th>
+                        <td>
+                ";
+                if ($row["cupo"] > 0) {
+                    echo "<a onClick=\"javascript: return confirm('Estas seguro que desea inscribirse a la consulta de " . $row2["nombre"], ' ', $row2["apellido"]. "?');\" href='inscribirAlumno.php?id=".$row['id']."'>Inscribirse</a>";
+                } else {
+                    echo "<p>Consulta sin cupo</p>";
+                }
+                echo"
+                        </td>
+                        <td> <p><b>Nombre Materia: " . $row3["nombre_materia"]. "</b> <p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p> Día de consulta: " . $fecha . "</p> </td>
+                        <td><b>" . $hora . "</b></td>
+                    </tr>
+                ";
             }
-            echo"
-                    </td>
-                    <td><p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p><b>Día de consulta: " . $fecha . "</b></td>
-                    <td><b>" . $hora . "</b></td>
-                </tr>
-            ";
         }
     }
 }
