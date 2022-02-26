@@ -1,5 +1,7 @@
 <?php
 
+include('./restringidoAlumno.php');
+
 include('db.php');
 
 $legajoAlu = $_SESSION['legajo'];
@@ -32,13 +34,15 @@ if ($resultado->num_rows > 0) {
                         <tr>
                             <th scope='row'></th>
                             <td>
-                                <a style='color: red' onClick=\"javascript: return confirm('Estas seguro de eliminar la consulta ". $row2['id'] . "?');\" href='blockConsulta.php?id=".$row2['id']."'>Bloquear</a>
-                                <form action='./reprogramarConsulta.php' method='post'>
-                                    <input type='hidden' name='id' value='" . $row2["id"] . "'/><br>
-                                    <input type='submit' value='Reprogramar' />
+                                <a style='color: red' onClick=\"javascript: return confirm('Estas seguro que se quiere desinscribir de la consulta ". $idConsulta . "?');\" href='cancelarConsulta.php?legAlumno =".$legajoAlu." id=".$idConsulta."'>Cancelar</a>
+                                
+                                <form action='./cancelarConsulta.php' method='post'>
+                                    <input type='hidden' name='id' value='" . $idConsulta . "'/><br>
+                                    <input type='hidden' name='legAlumno' value='" . $legajoAlu . "'/><br>
+                                    <input type='submit' value='Cancelar' />
                                 </form>
                             </td>
-                            <td><p><b>Nombre Materia: " . $row4["nombre_materia"]. "</b> <p>Profesor: " . $row3["nombre"], ' ', $row3["apellido"]. "</p><p>Cupos Disponibles: " . $row2["cupo"] . "</p>Día de consulta: " . $fecha . "</td>
+                            <td><p><b>Nombre Materia: " . $row4["nombre_materia"]. "</b> <p>Profesor: " . $row3["nombre"], ' ', $row3["apellido"]. "</p><p>Cupos Disponibles: " . $row2["cupo"] . "</p>Día de consulta: " . $fecha . "</b></td>
                             <td><b>" . $hora . "</b></td>
                         </tr>
                     ";
