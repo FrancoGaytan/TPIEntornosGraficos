@@ -2,10 +2,17 @@
 
 include('db.php');
 
-$consulta="SELECT * FROM consultas WHERE estado = 1 and fecha_hora > curdate();";
+$where = "WHERE estado = 1 and fecha_hora > curdate()";
+
+if(isset($_POST["idMateria"]) && !empty($_POST["idMateria"])) {
+    
+    $filtroMateria = $_POST["idMateria"];
+    $where .= " and id_materia = $filtroMateria";
+
+}
+
+$consulta="SELECT * FROM consultas $where ORDER BY fecha_hora ASC;";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
-
-
 
 if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {

@@ -43,7 +43,6 @@ height: 100%;
 
 .btn-primary{
     align-content: center;
-    padding-left: 40%;
     padding-top: 10;
     text-align: center;
 
@@ -73,4 +72,8 @@ h2{
 
 .contenido{
     display: flex;justify-content: center;
+}
+
+.margined {
+    margin: 1em;
 }
