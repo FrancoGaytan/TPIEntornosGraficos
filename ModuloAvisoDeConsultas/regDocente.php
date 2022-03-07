@@ -36,11 +36,7 @@
         <label for="exampleInputContraseña">Contraseña</label>
         <input name="contraseñaDocente" type="password" class="form-control" id="contraseñaDocente" placeholder="Ingrese su contraseña">
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Confirma que no eres un bot</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Registrarse</button>
+      <button type="submit" class="btn btn-primary margined">Registrarse</button>
     </form>
 </div>
 <?php

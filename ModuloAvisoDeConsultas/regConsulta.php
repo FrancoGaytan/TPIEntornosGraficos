@@ -12,7 +12,7 @@
 <link href="css/estilos.css" rel="stylesheet">
 
 <div class="contenido">
-  <form action="./registrarConsulta.php" method="post" class="formulario">
+  <form action="./registrarConsulta.php" method="post" class="formulario form-group">
       <div class="titulo">
           <h2>Registro de Nueva Consulta</h2>
       </div>
@@ -39,7 +39,7 @@
         <input name="cupoConsulta" type="number" class="form-control" id="cupoConsulta" aria-describedby="emailHelp" placeholder="Ingrese el cupo de la consulta">
       </div>
 
-      <button type="submit" class="btn btn-primary">Confirmar</button>
+      <button type="submit" class="btn btn-primary margined">Confirmar</button>
     </form>
 </div>
 

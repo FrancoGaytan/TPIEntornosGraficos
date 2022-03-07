@@ -12,7 +12,7 @@
         </td>
     </tr>
 </table>
-<div class="container" align="center">
+<div class="margined" align="center">
     
         <button class="btn btn-dark" role="button" onclick="window.location.href = 'loginAlumno.php'">
         Soy alumno

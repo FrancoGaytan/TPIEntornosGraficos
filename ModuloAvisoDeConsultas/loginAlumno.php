@@ -16,11 +16,6 @@
       <label for="exampleInputEmail1">Email</label>
       <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
     </div>
-    
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Confirma que no eres un bot</label>
-    </div>
 
     <button type="submit" class="btn btn-primary">Ingresar</button>
   </form>
