@@ -1,6 +1,6 @@
 <?php
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $where = "WHERE estado = 1 and fecha_hora > curdate()";
 

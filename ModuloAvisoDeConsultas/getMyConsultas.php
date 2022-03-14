@@ -1,6 +1,6 @@
 <?php
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $legajoDoc = $_SESSION['legajo'];
 $consulta="SELECT * FROM consultas WHERE estado = 1 and fecha_hora > curdate() and id_profesor = {$legajoDoc};";

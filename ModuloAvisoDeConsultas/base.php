@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] . 'templates/header.php')
 ?>
         
     <h1>Sistema de Gestión de consultas</h1>
@@ -18,7 +18,7 @@
 </body>
     
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>

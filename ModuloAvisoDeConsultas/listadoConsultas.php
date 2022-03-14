@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php
-    include_once('./isSessionStarted.php');
+    include_once($_SERVER["DOCUMENT_ROOT"] .'./isSessionStarted.php');
 
-    include('./restringidoAlumno.php');
+    include($_SERVER["DOCUMENT_ROOT"] .'./restringidoAlumno.php');
 ?>
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
 ?>
 
 <div class="container">
@@ -25,7 +25,7 @@
         <select class="form-select" name="idMateria" id="idMateria" aria-label="Materias">
             <option selected value=''>Cualquier materia</option>
             <?php
-            include('getAllMaterias.php')
+            include($_SERVER["DOCUMENT_ROOT"] .'getAllMaterias.php')
             ?>
         </select>
         <br>
@@ -44,7 +44,7 @@
     </thead>
     <tbody>
         <?php
-        include('getAllConsultas.php')
+        include($_SERVER["DOCUMENT_ROOT"] .'getAllConsultas.php')
         ?>
     </tbody>
     </table>
@@ -52,7 +52,7 @@
 </div>
 
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>

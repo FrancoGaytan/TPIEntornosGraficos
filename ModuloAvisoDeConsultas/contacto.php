@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
 ?>
 
 <link href="css/estilos.css" rel="stylesheet">
@@ -76,7 +76,7 @@
 </div>
 
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $consulta="SELECT * FROM materias";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));

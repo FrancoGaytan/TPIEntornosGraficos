@@ -2,11 +2,11 @@
 <html lang="en">
 
 <?php
-    include('./restringidoDocente.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'./restringidoDocente.php')
 ?>
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
 ?>
 
 <div class="container">
@@ -41,7 +41,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include('getMyConsultas.php')
+                        include($_SERVER["DOCUMENT_ROOT"] .'getMyConsultas.php')
                         ?>
                     </tbody>
                 </table>
@@ -53,7 +53,7 @@
 </div>
 
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>

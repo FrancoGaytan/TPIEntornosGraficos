@@ -2,10 +2,10 @@
 $email=$_POST['email'];
 $contraseña=$_POST['contrasenia'];
 
-include_once('destroySession.php');
-include_once('isSessionStarted.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'destroySession.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'isSessionStarted.php');
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $consulta="SELECT * FROM profesores WHERE email='$email' and contrasenia='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
@@ -24,7 +24,7 @@ if(mysqli_num_rows($resultado) > 0){
     echo '<div class="alert alert-danger" role="alert">
     Error en la autenticación
     </div>';
-    include("loginDocente.php");
+    include($_SERVER["DOCUMENT_ROOT"] ."loginDocente.php");
 }
 
 mysqli_free_result($resultado);

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
 ?>
 
 <div class="contenido">
@@ -40,7 +40,7 @@
     </form>
 </div>
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>

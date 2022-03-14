@@ -5,7 +5,7 @@ $legajoDocente=$_POST['legajoDocente'];
 $emailDocente=$_POST['emailDocente'];
 $contraseñaDocente=$_POST['contraseñaDocente'];
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 // Busco por legajo
 $consulta = "SELECT Count(legajo) as cantidad FROM profesores WHERE legajo='$legajoDocente'";
@@ -21,14 +21,14 @@ if ($cantProfesoresLegajo ['cantidad']!=0){
       echo '<div class="alert alert-danger" role="alert">
       Ya existe un docente con ese legajo
       </div>';
-      include('./regDocente.php');
+      include($_SERVER["DOCUMENT_ROOT"] .'./regDocente.php');
 }
 else {
       if ($cantProfesoresEmail ['cantidad']!=0) {
             echo '<div class="alert alert-danger" role="alert">
             Ya existe un docente con ese email
             </div>';
-            include('./regDocente.php');
+            include($_SERVER["DOCUMENT_ROOT"] .'./regDocente.php');
       }
       else {
             $consulta = "INSERT INTO profesores (legajo, nombre, apellido, email, contrasenia) 
@@ -37,7 +37,7 @@ else {
             echo "<div class='alert alert-success' role='alert'>
             El profesor $nombreDocente $apellidoDocente fue agregado correctamente
             </div>";
-            include("./loginDocente.php");
+            include($_SERVER["DOCUMENT_ROOT"] ."./loginDocente.php");
       }
 }
 

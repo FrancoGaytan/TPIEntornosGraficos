@@ -1,6 +1,6 @@
 <?php
 
-include_once('isSessionStarted.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'isSessionStarted.php');
 
 $idMateria=$_POST['idMateria'];
 $fechaConsulta=$_POST['fechaConsulta'];
@@ -13,7 +13,7 @@ $formatoOutput = 'Y-m-d H:i:s';
 $fechaHora = DateTime::createFromFormat($formatoInput, "$fechaConsulta $horaConsulta");
 $fechaString = $fechaHora -> format($formatoOutput);
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $consulta="INSERT INTO consultas (fecha_hora, cupo, id_profesor, id_materia) VALUES ('$fechaString', '$cupoConsulta', '$legajo', '$idMateria')";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
@@ -21,7 +21,7 @@ $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 echo "<div class='alert alert-success' role='alert'>
 La consulta fue agregada correctamente
 </div>";
-include("./regConsulta.php");
+include($_SERVER["DOCUMENT_ROOT"] ."./regConsulta.php");
 
 mysqli_free_result($resultado);
 mysqli_close($conexion);

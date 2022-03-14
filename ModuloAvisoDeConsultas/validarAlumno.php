@@ -2,10 +2,10 @@
 <?php
 $email=$_POST['email'];
 
-include_once('destroySession.php');
-include_once('isSessionStarted.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'destroySession.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'isSessionStarted.php');
 
-include('db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'db.php');
 
 $consulta="SELECT * FROM alumnos WHERE email='$email'";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
@@ -24,7 +24,7 @@ if(mysqli_num_rows($resultado) > 0){
     echo '<div class="alert alert-danger" role="alert">
     Error en la autenticación
     </div>';
-    include("./loginAlumno.php");
+    include($_SERVER["DOCUMENT_ROOT"] ."./loginAlumno.php");
 }
 
 mysqli_free_result($resultado);

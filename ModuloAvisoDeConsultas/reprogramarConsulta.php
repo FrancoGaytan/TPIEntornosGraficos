@@ -1,12 +1,12 @@
 <?php
-    include('./restringidoDocente.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'./restringidoDocente.php')
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <?php
-    include('templates/header.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
 ?>
 
 <link href="css/estilos.css" rel="stylesheet">
@@ -36,7 +36,7 @@
 ?>
 
 <?php
-    include('templates/footer.php')
+    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
 ?>
 
 </html>
