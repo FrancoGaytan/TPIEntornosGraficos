@@ -1,9 +1,9 @@
-<!doctype html>
-<html lang="en">
-
 <?php
     include($_SERVER["DOCUMENT_ROOT"] .'./restringidoAlumno.php')
 ?>
+
+<!doctype html>
+<html lang="en">
 
 <?php
     include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
