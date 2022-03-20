@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
+    include('templates/header.php')
 ?>
 
 <div class="contenido">
@@ -14,33 +14,29 @@
 
       <div class="form-group">
           <label for="exampleInputNombre">Nombre</label>
-          <input name="nombreDocente" type="text" class="form-control" id="nombreDocente" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
-          <small id="nombreHelp" class="form-text text-muted">No compartiremos su nombre con nadie más.</small>
+          <input name="nombreDocente" type="text" class="form-control" id="nombreDocente" aria-describedby="emailHelp" placeholder="Ingrese su nombre" required>
         </div>
         <div class="form-group">
           <label for="exampleInputApellido">Apellido</label>
-          <input name="apellidoDocente" type="text" class="form-control" id="apellidoDocente" aria-describedby="emailHelp" placeholder="Ingrese su apellido">
-          <small id="apellidoHelp" class="form-text text-muted">No compartiremos su apellido con nadie más.</small>
+          <input name="apellidoDocente" type="text" class="form-control" id="apellidoDocente" aria-describedby="emailHelp" placeholder="Ingrese su apellido" required>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Legajo</label>
-          <input name="legajoDocente" type="number" class="form-control" id="legajoDocente" aria-describedby="emailHelp" placeholder="Ingrese su legajo">
-          <small id="legajoHelp" class="form-text text-muted">No compartiremos su id con nadie más.</small>
+          <input name="legajoDocente" type="number" class="form-control" id="legajoDocente" aria-describedby="emailHelp" placeholder="Ingrese su legajo" required>
         </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input name="emailDocente" type="email" class="form-control" id="emailDocente" aria-describedby="emailHelp" placeholder="Ingrese su email">
-        <small id="emailHelp" class="form-text text-muted">No compartiremos su email con nadie más.</small>
+        <input name="emailDocente" type="email" class="form-control" id="emailDocente" aria-describedby="emailHelp" placeholder="Ingrese su email" required>
       </div>
       <div class="form-group">
         <label for="exampleInputContraseña">Contraseña</label>
-        <input name="contraseñaDocente" type="password" class="form-control" id="contraseñaDocente" placeholder="Ingrese su contraseña">
+        <input name="contraseñaDocente" type="password" class="form-control" id="contraseñaDocente" placeholder="Ingrese su contraseña" required>
       </div>
       <button type="submit" class="btn btn-primary margined">Registrarse</button>
     </form>
 </div>
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
+    include('templates/footer.php')
 ?>
 
 </html>
