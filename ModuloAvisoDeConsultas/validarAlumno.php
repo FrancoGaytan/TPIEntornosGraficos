@@ -1,11 +1,10 @@
-
 <?php
 $email=$_POST['email'];
 
-include_once($_SERVER["DOCUMENT_ROOT"] .'destroySession.php');
-include_once($_SERVER["DOCUMENT_ROOT"] .'isSessionStarted.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'/destroySession.php');
+include_once($_SERVER["DOCUMENT_ROOT"] .'/isSessionStarted.php');
 
-include($_SERVER["DOCUMENT_ROOT"] .'db.php');
+include($_SERVER["DOCUMENT_ROOT"] .'/db.php');
 
 $consulta="SELECT * FROM alumnos WHERE email='$email'";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
