@@ -1,6 +1,6 @@
 <?php
 
-include($_SERVER["DOCUMENT_ROOT"] .'db.php');
+include('db.php');
 
 $where = "WHERE estado = 1 and fecha_hora > curdate()";
 
@@ -43,7 +43,7 @@ if ($resultado->num_rows > 0) {
                 }
                 echo"
                         </td>
-                        <td> <p><b>Nombre Materia: " . $row3["nombre_materia"]. "</b> <p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p> Día de consulta: " . $fecha . "</p> </td>
+                        <td> <p><b>Materia: " . $row3["nombre_materia"]. "</b> <p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Cupos Disponibles: " . $row["cupo"]. "</p> Día de consulta: " . $fecha . "</p> </td>
                         <td><b>" . $hora . "</b></td>
                     </tr>
                 ";
