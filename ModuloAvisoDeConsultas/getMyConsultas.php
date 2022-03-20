@@ -1,6 +1,6 @@
 <?php
 
-include($_SERVER["DOCUMENT_ROOT"] .'db.php');
+include('db.php');
 
 $legajoDoc = $_SESSION['legajo'];
 $consulta="SELECT * FROM consultas WHERE estado = 1 and fecha_hora > curdate() and id_profesor = {$legajoDoc};";
@@ -23,7 +23,7 @@ if ($resultado->num_rows > 0) {
             <tr>
                 <th scope='row'></th>
                 <td>
-                    <a style='color: red' onClick=\"javascript: return confirm('Estas seguro de eliminar la consulta ". $row['id'] . "?');\" href='blockConsulta.php?id=".$row['id']."'>Bloquear</a>
+                    <a style='color: red' onClick=\"javascript: return confirm('Estas seguro de eliminar la consulta?');\" href='blockConsulta.php?id=".$row['id']."'>Bloquear</a>
                     <form action='./reprogramarConsulta.php' method='post'>
                         <input type='hidden' name='id' value='" . $row["id"] . "'/><br>
                         <input type='submit' value='Reprogramar' />
