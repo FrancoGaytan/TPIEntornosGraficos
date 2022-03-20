@@ -1,12 +1,14 @@
 <?php
 
-include_once($_SERVER["DOCUMENT_ROOT"] .'isSessionStarted.php');
+include_once('isSessionStarted.php');
+
+//var_dump($_SESSION);
 
 if ((!isset($_SESSION['esDocente'])) or (!$_SESSION['esDocente'])){ 
     echo '<div class="alert alert-danger" role="alert">
     Solo los Docentes tienen acceso a esta página
     </div>';
-    include($_SERVER["DOCUMENT_ROOT"] ."inicioSesion.php");
+    include("index.php");
     die();
 }
 
