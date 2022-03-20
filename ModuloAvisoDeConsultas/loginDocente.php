@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
+    include('templates/header.php')
 ?>
 
 <div class="contenido margined">
@@ -21,12 +21,12 @@
         <input type="password" name="contrasenia" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
       </div>
 
-      <button type="submit" class="btn btn-primary">Ingresar</button>
+      <button type="submit" class="btn btn-primary margined">Ingresar</button>
     </form>
 </div>
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
+    include('templates/footer.php')
 ?>
 
 </html>
