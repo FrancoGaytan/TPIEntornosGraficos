@@ -1,15 +1,24 @@
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'./restringidoDocente.php')
+    include('./restringidoDocente.php')
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
+    include('templates/header.php')
 ?>
 
 <div class="container">
+    <?php
+        if(isset($_GET["msg"])) {
+            echo "
+            <div class='alert alert-success margined' role='alert'>
+            " . $_GET["msg"] . "
+            </div>
+            ";
+        }
+    ?>
     <section class="main row">
         <article class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
             <br>
@@ -18,7 +27,6 @@
             <br>
             <h3><?php echo $_SESSION['nombre']; echo ' '; echo $_SESSION['apellido'] ?></h3>
             <h4>Legajo: <?php echo $_SESSION['legajo'] ?></h4>
-            <p>Este es el parrafo de prueba de la pagina de consultas del docente donde estos pueden agregar informacion adicional para su perfil </p>
             <td><button type="button" class="btn btn-outline-secondary" onclick="window.location.href = 'historialConsultasDoc.php'">Historial de Consultas </button></td>
 
         </article>
@@ -41,7 +49,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include($_SERVER["DOCUMENT_ROOT"] .'getMyConsultas.php')
+                        include('getMyConsultas.php')
                         ?>
                     </tbody>
                 </table>
@@ -53,7 +61,7 @@
 </div>
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
+    include('templates/footer.php')
 ?>
 
 </html>
