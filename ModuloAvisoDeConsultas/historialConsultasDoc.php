@@ -1,12 +1,11 @@
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'./restringidoDocente.php')
+     include('./restringidoDocente.php')
 ?>
-
 <!doctype html>
 <html lang="en">
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/header.php')
+    include('templates/header.php')
 ?>
 
 <div class="container">
@@ -18,7 +17,6 @@
             <br>
             <h3><?php echo $_SESSION['nombre']; echo ' '; echo $_SESSION['apellido'] ?></h3>
             <h4>Legajo: <?php echo $_SESSION['legajo'] ?></h4>
-            <p>Este es el parrafo de prueba de la pagina de consultas del docente donde estos pueden agregar informacion adicional para su perfil </p>
             <td><button type="button" class="btn btn-outline-secondary" onclick="window.location.href = 'misConsultasDoc.php'">Regresar a mis consultas</button></td>
 
         </article>
@@ -41,7 +39,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include($_SERVER["DOCUMENT_ROOT"] .'getMyConsultasRealizadas.php')
+                        include('getMyConsultasRealizadas.php')
                         ?>
                     </tbody>
                 </table>
@@ -53,7 +51,7 @@
 </div>
 
 <?php
-    include($_SERVER["DOCUMENT_ROOT"] .'templates/footer.php')
+    include('templates/footer.php')
 ?>
 
 </html>
