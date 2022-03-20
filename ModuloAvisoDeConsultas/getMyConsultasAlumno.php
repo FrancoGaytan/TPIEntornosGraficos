@@ -1,8 +1,8 @@
 <?php
 
-include($_SERVER["DOCUMENT_ROOT"] .'./restringidoAlumno.php');
+include('./restringidoAlumno.php');
 
-include($_SERVER["DOCUMENT_ROOT"] .'db.php');
+include('db.php');
 
 $legajoAlu = $_SESSION['legajo'];
 $consultasAlumno="SELECT * FROM alumno_consulta AS ac 
