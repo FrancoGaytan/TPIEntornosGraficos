@@ -21,18 +21,41 @@
              </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./regConsulta.php" id="registroConsultas">Registro Consultas</a>
-                    </li>
+                    <?php
+                        if((isset($_SESSION['esAlumno'])) and ($_SESSION['esAlumno'])) {
+                            echo '
+                            <li class="nav-item">
+                            <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
+                            </li>
+                            ';
+                        } else {
+                            if((isset($_SESSION['esDocente'])) and ($_SESSION['esDocente'])){
+                            echo '
+                            <li class="nav-item">
+                            <a class="nav-link" href="./regConsulta.php" id="registroConsultas">Registro Consultas</a>
+                            </li>
+                            ';
+                            }
+                        }
+                    ?>
                 </ul>
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./inicioSesion.php"id="Ingreso">Ingreso</a>
-                        </li>
+                        <?php
+                        if(isset($_SESSION['legajo'])) {
+                            echo '
+                            <li class="nav-item">
+                            <a class="nav-link" href="./cerrarSesion.php" id="Ingreso">Cerrar sesión</a>
+                            </li>
+                            ';
+                        } else {
+                            echo '
+                            <li class="nav-item">
+                            <a class="nav-link" href="./index.php" id="Ingreso">Ingreso</a>
+                            </li>
+                            ';
+                        }
+                        ?>
                         <li class="nav-item">
                             <a class="nav-link" href="./regDocente.php" id="RegistroDocente">Registro Docente</a>
                         </li>
