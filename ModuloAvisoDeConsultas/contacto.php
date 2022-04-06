@@ -14,47 +14,31 @@
             <div class="titulo">
                 <h2>Contacto</h2>
             </div>  
-            <form action="envioFormulario.php" method="post">
-                
-                <p>
+            <form action="enviarFormulario.php" method="post">
+
                 <label for="nombre" class="colocar_nombre">Nombre
                     <span class="obligatorio">*</span>
                 </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                </p>
+                <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
 
-                <p>
                 <label for="email" class="colocar_email">Email
                     <span class="obligatorio">*</span>
                 </label>
-                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                </p>
+                <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
 
-                <p>
-                <label for="telefone" class="colocar_telefono">Teléfono
+                <label for="telefono" class="colocar_telefono">Teléfono
                 </label>
-                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                </p>    
-
-                <p>
-                <label for="website" class="colocar_website">Sitio web
-                </label>
-                    <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                </p>    
-
-                <p>
+                <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+    
                 <label for="asunto" class="colocar_asunto">Asunto
                     <span class="obligatorio">*</span>
                 </label>
-                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                </p>    
-
-                <p>
-                <label for="mensaje" class="colocar_mensaje">Mensaje
+                <input type="text" name="asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+ 
+                <label for="mensaje" class="mensaje">Mensaje
                     <span class="obligatorio">*</span>
                 </label>                     
-                                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                </p>                    
+                <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>                   
 
                 <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
 
