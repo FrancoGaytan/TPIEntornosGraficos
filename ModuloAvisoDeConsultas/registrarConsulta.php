@@ -11,6 +11,16 @@ $legajo=$_SESSION['legajo'];
 $formatoInput = 'Y-m-d H:i';
 $formatoOutput = 'Y-m-d H:i:s';
 $fechaHora = DateTime::createFromFormat($formatoInput, "$fechaConsulta $horaConsulta");
+$now = date('m-d-Y h:i:s a', time());
+
+if($fechaHora < $now) {
+    echo '<div class="alert alert-danger" role="alert">
+    Ya existe un docente con ese legajo
+    </div>';
+    include('./regConsulta.php');
+    exit();
+}
+
 $fechaString = $fechaHora -> format($formatoOutput);
 
 include('db.php');
