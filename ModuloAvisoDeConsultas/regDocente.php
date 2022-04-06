@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Legajo</label>
-          <input name="legajoDocente" type="number" class="form-control" id="legajoDocente" aria-describedby="emailHelp" placeholder="Ingrese su legajo" required>
+          <input name="legajoDocente" type="text" class="form-control" title="Ingrese solo números" pattern="[0-9]*" id="legajoDocente" maxlength="6" aria-describedby="emailHelp" placeholder="Ingrese su legajo" required>
         </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>

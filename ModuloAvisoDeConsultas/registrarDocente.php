@@ -1,7 +1,7 @@
 <?php
 $nombreDocente=$_POST['nombreDocente'];
 $apellidoDocente=$_POST['apellidoDocente'];
-$legajoDocente=$_POST['legajoDocente'];
+$legajoDocente=(int) $_POST['legajoDocente'];
 $emailDocente=$_POST['emailDocente'];
 $contraseñaDocente=$_POST['contraseñaDocente'];
 
