@@ -27,7 +27,7 @@ $mail->Password = 'consultas123'; //contraseña
  
 //Agregar destinatario
 $mail->AddAddress("fedenavos@gmail.com");
-$mail->AddAddress("francogaytan@gmail.com");
+$mail->AddAddress("gaytanfranco@gmail.com");
 $mail->Subject = "Mensaje en Consultas UTN";
 $mensaje = "
 Llego una consulta en su sitio web con los siguientes datos: \n
