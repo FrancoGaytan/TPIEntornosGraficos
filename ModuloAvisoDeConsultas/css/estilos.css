@@ -1,65 +1,67 @@
 body{
-font-family: 'Titillium Web', sans-serif;
-height: 100%;
-}
+    font-family: 'Titillium Web', sans-serif;
+    height: 100%;
 
-.navbar{
-    background-color: #0f0e0e;
-    box-shadow: 0 2px 4px 0 rgb(0, 0, 0);
-    min-height: 100px;
-}
-
-.nav-link{
-    color: #ffffff
-}
-
-.navbar-brand{
-    color: #ffffff
-}
-
-.img-responsive{
-    height: 85px;
-}
-
-.img-responsive2{
-    height: 100px;
-}
-
-.form-group{
-    padding-top: 10px;
-    justify-content: center;
-    max-width: 1200px;
-    align-content: center;
-}
-
-.btn-primary{
-    align-content: center;
-    padding-top: 10;
-    text-align: center;
-
-}
-
-#nombreHelp {
-    padding-top: 5%;
-}
-
-h2{
-    align-content: center;
-    padding-top: 5%;
-}
-
-.text-uppercase{
-    padding-top: 25px;
-}
-
-.formulario{
-    width: 500px;
-}
-
-.contenido{
-    display: flex;justify-content: center;
-}
-
-.margined {
-    margin: 1em;
-}
+    }
+    
+    
+    .navbar{
+        background-color: #0f0e0e;
+        box-shadow: 0 2px 4px 0 rgb(0, 0, 0);
+        min-height: 100px;
+    }
+    
+    .nav-link{
+        color: #ffffff
+    }
+    
+    .navbar-brand{
+        color: #ffffff
+    }
+    
+    .img-responsive{
+        height: 85px;
+    }
+    
+    .img-responsive2{
+        height: 100px;
+    }
+    
+    .form-group{
+        padding-top: 10px;
+        justify-content: center;
+        max-width: 1200px;
+        align-content: center;
+    }
+    
+    .btn-primary{
+        align-content: center;
+        padding-top: 0; 
+        text-align: center;
+    
+    }
+    
+    #nombreHelp {
+        padding-top: 5%;
+    }
+    
+    h2{
+        align-content: center;
+        padding-top: 5%;
+    }
+    
+    .text-uppercase{
+        padding-top: 25px;
+    }
+    
+    .formulario{
+        width: 500px;
+    }
+    
+    .contenido{
+        display: flex;justify-content: center;
+    }
+    
+    .margined {
+        margin: 1em;
+    }
