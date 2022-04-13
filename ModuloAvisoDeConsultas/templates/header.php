@@ -28,14 +28,20 @@
                             <a class="nav-link" href="./listadoConsultas.php" id="Horarios">Horarios</a>
                             </li>
                             ';
-                        } else {
-                            if((isset($_SESSION['esDocente'])) and ($_SESSION['esDocente'])){
+                        }
+                        if((isset($_SESSION['esDocente'])) and ($_SESSION['esDocente'])){
                             echo '
                             <li class="nav-item">
                             <a class="nav-link" href="./regConsulta.php" id="registroConsultas">Registro Consultas</a>
                             </li>
                             ';
-                            }
+                        }
+                        if((isset($_SESSION['esAdmin'])) and ($_SESSION['esAdmin'])){
+                            echo '
+                            <li class="nav-item">
+                            <a class="nav-link" href="./panelAdmin.php" id="panelAdmin">Panel del Administrador</a>
+                            </li>
+                            ';
                         }
                     ?>
                 </ul>

@@ -14,8 +14,8 @@
       </div>
   
       <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+        <label for="inputEmail">Email</label>
+        <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Ingrese su email">
       </div>
   
       <button type="submit" class="btn btn-primary margined">Ingresar</button>

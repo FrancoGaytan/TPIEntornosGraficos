@@ -12,13 +12,13 @@
       </div>
       
       <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
+        <label for="inputEmail">Email</label>
+        <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Ingrese su email">
       </div>
 
       <div class="form-group">
-        <label for="exampleInputContraseña">Contraseña</label>
-        <input type="password" name="contrasenia" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+        <label for="inputContrasenia">Contraseña</label>
+        <input type="password" name="contrasenia" class="form-control" id="inputContrasenia" placeholder="Ingrese su contraseña">
       </div>
 
       <button type="submit" class="btn btn-primary margined">Ingresar</button>

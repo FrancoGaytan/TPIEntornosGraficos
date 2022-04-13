@@ -20,6 +20,12 @@
         <button class="btn btn-secondary" role="button" onclick="window.location.href = 'loginDocente.php'">
         Soy docente
         </button>
+
+        <br>
+        <br>
+        <br>
+
+        <a href="loginAdmin.php">Soy administrador</a>
     
 </div>
 
