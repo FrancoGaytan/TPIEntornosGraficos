@@ -10,6 +10,15 @@
 ?>
 
 <div class="container">
+    <?php   
+        if(isset($_GET["msg"])) {
+            echo "
+            <div class='alert alert-success margined' role='alert'>
+            " . $_GET["msg"] . "
+            </div>
+            ";
+        }
+    ?>
     <section class="main row">
         <article class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
             <br>
@@ -33,12 +42,30 @@
                         <tr>
                         <th scope="col"></th>
                         <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include('getAllDocentes.php')
+                        ?>
+                    </tbody>
+                </table>
+
+                <div class="titulo">
+                    <h2>Alumnos</h2>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
                         <th scope="col"></th>
                         <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <?php
+                        include('getAllAlumnos.php')
+                        ?>
                     </tbody>
                 </table>
 
