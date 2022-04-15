@@ -4,7 +4,7 @@ $legajo = $_GET['legajo'];
 
 include($_SERVER["DOCUMENT_ROOT"] .'/db.php');
 
-$consulta="DELETE FROM docentes WHERE legajo = $legajo;";
+$consulta="DELETE FROM profesores WHERE legajo = $legajo;";
 $resultado = mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 
 if(is_object($resultado))
@@ -12,7 +12,7 @@ if(is_object($resultado))
 
 mysqli_close($conexion);
 
-header("Location: panelAdmin.php?msg=".urlencode("El docente fue eliminado correctamente"));
+header("Location: panelAdminDocentes.php?msg=".urlencode("El docente fue eliminado correctamente"));
 exit();
 
 ?>

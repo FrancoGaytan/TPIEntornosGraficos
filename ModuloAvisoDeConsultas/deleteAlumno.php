@@ -12,7 +12,7 @@ if(is_object($resultado))
 
 mysqli_close($conexion);
 
-header("Location: panelAdmin.php?msg=".urlencode("El alumno fue eliminado correctamente"));
+header("Location: panelAdminAlumnos.php?msg=".urlencode("El alumno fue eliminado correctamente"));
 exit();
 
 ?>

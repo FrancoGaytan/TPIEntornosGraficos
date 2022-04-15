@@ -23,7 +23,7 @@ if(mysqli_num_rows($resultado) > 0){
     $_SESSION['esAlumno']=true;
     $_SESSION['esAdmin']=true;
     
-    header("location:./panelAdmin.php");
+    header("location:./panelAdminDocentes.php");
     exit();
 }else{
     echo '<div class="alert alert-danger" role="alert">

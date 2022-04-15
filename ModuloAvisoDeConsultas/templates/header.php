@@ -39,7 +39,10 @@
                         if((isset($_SESSION['esAdmin'])) and ($_SESSION['esAdmin'])){
                             echo '
                             <li class="nav-item">
-                            <a class="nav-link" href="./panelAdmin.php" id="panelAdmin">Panel del Administrador</a>
+                            <a class="nav-link" href="./panelAdminDocentes.php" id="panelAdminDocentes">Docentes</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./panelAdminAlumnos.php" id="panelAdminAlumnos">Alumnos</a>
                             </li>
                             ';
                         }

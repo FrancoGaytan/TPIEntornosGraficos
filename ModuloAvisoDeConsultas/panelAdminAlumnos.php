@@ -9,6 +9,14 @@
     include('templates/header.php')
 ?>
 
+<style>
+    .div_before_table {
+        overflow:hidden;
+        overflow-y: scroll;
+        height: 500px;
+    }
+</style>
+
 <div class="container">
     <?php   
         if(isset($_GET["msg"])) {
@@ -34,41 +42,25 @@
         <div class="container">
 
                 <div class="titulo">
-                    <h2>Docentes</h2>
-                </div>
-
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        include('getAllDocentes.php')
-                        ?>
-                    </tbody>
-                </table>
-
-                <div class="titulo">
                     <h2>Alumnos</h2>
                 </div>
 
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        include('getAllAlumnos.php')
-                        ?>
-                    </tbody>
-                </table>
-
+                <div class="div_before_table">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            include('getAllAlumnos.php')
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
         </aside>
   
