@@ -35,6 +35,7 @@
             <br>
             <h3><?php echo $_SESSION['nombre']; echo ' '; echo $_SESSION['apellido'] ?></h3>
             <h4>Legajo: <?php echo $_SESSION['legajo'] ?></h4>
+            <td><button type="button" class="btn btn-outline-secondary" onclick="window.location.href = 'regAlumno.php'">Registrar Nuevo Alumno </button></td>
 
         </article>
 
