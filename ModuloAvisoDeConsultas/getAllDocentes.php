@@ -12,7 +12,7 @@ if ($resultado->num_rows > 0) {
                 <td>
                     <a style='color: red' onClick=\"javascript: return confirm('Estas seguro de eliminar el docente?');\" href='deleteDocente.php?legajo=".$row['legajo']."'>Eliminar</a>
                 </td>
-                <td><p>Profesor: " . $row2["nombre"], ' ', $row2["apellido"]. "</p><p>Legajo: " . $row["legajo"] . "</p></td>
+                <td><p>Profesor: " . $row["nombre"], ' ', $row["apellido"]. "</p><p>Legajo: " . $row["legajo"] . "</p></td>
             </tr>
         ";
     }
