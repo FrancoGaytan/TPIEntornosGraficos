@@ -3,7 +3,7 @@
 include('db.php');
 
 $legajoDoc = $_SESSION['legajo'];
-$consulta="SELECT * FROM consultas WHERE fecha_hora < curdate() and id_profesor = {$legajoDoc};";
+$consulta="SELECT * FROM consultas WHERE estado != 2 and fecha_hora < curdate() and id_profesor = {$legajoDoc};";
 $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 
 if ($resultado->num_rows > 0) {
