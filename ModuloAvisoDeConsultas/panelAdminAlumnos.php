@@ -26,6 +26,13 @@
             </div>
             ";
         }
+        if(isset($_GET["alert"])) {
+            echo "
+            <div class='alert alert-danger margined' role='alert'>
+            " . $_GET["alert"] . "
+            </div>
+            ";
+        }
     ?>
     <section class="main row">
         <article class="col-xs-12 col-sm-4 col-md-3 col-lg-3">

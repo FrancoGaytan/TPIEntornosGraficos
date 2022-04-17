@@ -1,3 +1,7 @@
+<?php
+    include('./restringidoAdmin.php')
+?>
+
 <!doctype html>
 <html lang="en">
 

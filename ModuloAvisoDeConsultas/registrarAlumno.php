@@ -17,31 +17,23 @@ $resultado = mysqli_query($conexion, $consulta) or die (mysqli_error($conexion))
 $cantAlumnosEmail = mysqli_fetch_assoc($resultado);
 
 if ($cantAlumnosLegajo ['cantidad']!=0){
-      echo '<div class="alert alert-danger" role="alert">
-      Ya existe un alumno con ese legajo
-      </div>';
-      include('./regAlumno.php');
+      header("Location: panelAdminAlumnos.php?alert=".urlencode("Ya existe un alumno con legajo $legajoAlumno"));
 }
 else {
       if ($cantAlumnosEmail ['cantidad']!=0) {
-            echo '<div class="alert alert-danger" role="alert">
-            Ya existe un alumno con ese email
-            </div>';
-            include('./regAlumno.php');
+            header("Location: panelAdminAlumnos.php?alert=".urlencode("Ya existe un alumno con ese email"));
       }
       else {
             $consulta = "INSERT INTO alumnos (legajo, nombre, apellido, email) 
                   VALUES ('$legajoAlumno', '$nombreAlumno', '$apellidoAlumno', '$emailAlumno')";
             $resultado=mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
-            echo "<div class='alert alert-success' role='alert'>
-            El Alumno $nombreAlumno $apellidoAlumno fue agregado correctamente
-            </div>";
-            include("./panelAdminAlumnos.php");
+            header("Location: panelAdminAlumnos.php?msg=".urlencode("El alumno $nombreAlumno $apellidoAlumno fue agregado correctamente"));
       }
 }
 
 // Liberar conjunto de resultados
 mysqli_free_result($resultado);
 mysqli_close($conexion);
+exit();
 
 ?>
