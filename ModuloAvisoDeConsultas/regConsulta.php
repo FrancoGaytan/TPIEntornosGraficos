@@ -26,7 +26,7 @@
     
   <form action="./registrarConsulta.php" method="post" class="formulario form-group">
       <?php
-      if ((isset($_SESSION['esAdmin'])) or ($_SESSION['esAdmin'])) {
+      if ((isset($_SESSION['esAdmin'])) && ($_SESSION['esAdmin'])) {
         echo '<div class="alert alert-danger" role="alert">
         Para registrar una consulta debe iniciar sesión como Docente. Puede registrar uno <a href="regDocente.php">aquí</a>.
         </div>';
