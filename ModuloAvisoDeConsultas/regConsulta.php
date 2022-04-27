@@ -25,6 +25,14 @@
 <div class="contenido">
     
   <form action="./registrarConsulta.php" method="post" class="formulario form-group">
+      <?php
+      if ((isset($_SESSION['esAdmin'])) or ($_SESSION['esAdmin'])) {
+        echo '<div class="alert alert-danger" role="alert">
+        Para registrar una consulta debe iniciar sesión como Docente. Puede registrar uno <a href="regDocente.php">aquí</a>.
+        </div>';
+      }
+      ?>
+
       <div class="titulo">
           <h2>Registro de Nueva Consulta</h2>
       </div>
@@ -43,7 +51,7 @@
 
       <div class="form-group">
         <label for="horaConsulta">Horario de Consulta</label>
-        <input name="horaConsulta" type="time" class="form-control" id="horaConsulta" aria-describedby="emailHelp" placeholder="Ingrese el horario de consulta" required>
+        <input name="horaConsulta" type="time" class="form-control" step="300" id="horaConsulta" aria-describedby="emailHelp" placeholder="Ingrese el horario de consulta" required>
       </div>
 
       <div class="form-group">

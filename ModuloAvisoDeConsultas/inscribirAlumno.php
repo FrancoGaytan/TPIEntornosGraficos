@@ -19,7 +19,7 @@ if (mysqli_errno($conexion) == 1062) {
     exit();
 }
 
-$consulta2="UPDATE consultas SET cupo = cupo - 1 WHERE id = $idConsulta;";
+$consulta2="UPDATE consultas SET cupo = cupo - 1 WHERE id = $idConsulta and cupo > 0;";
 $resultado2=mysqli_query($conexion,$consulta2) or die (mysqli_error($conexion));
 
 echo "<div class='alert alert-success' role='alert'>

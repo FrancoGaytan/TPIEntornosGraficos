@@ -15,7 +15,7 @@ $now = date('m-d-Y h:i:s a', time());
 
 if($fechaHora < $now) {
     echo '<div class="alert alert-danger" role="alert">
-    Ya existe un docente con ese legajo
+    La fecha de la consulta debe ser mayor a la fecha actual
     </div>';
     include('./regConsulta.php');
     exit();
