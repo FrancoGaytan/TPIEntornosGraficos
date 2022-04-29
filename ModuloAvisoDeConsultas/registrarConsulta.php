@@ -26,7 +26,7 @@ $fechaString = $fechaHora -> format($formatoOutput);
 include('db.php');
 
 $consulta="INSERT INTO consultas (fecha_hora, cupo, id_profesor, id_materia) VALUES ('$fechaString', '$cupoConsulta', '$legajo', '$idMateria')";
-$resultado=mysqli_query($conexion,$consulta) or header("Location: regConsulta.php?msg=".urlencode("Solo el Docente puede registrar la consulta."));exit();
+$resultado=mysqli_query($conexion,$consulta) or header("Location: regConsulta.php?msg=".urlencode("Solo el Docente puede registrar la consulta."), True);
 
 if(is_object($resultado))
     mysqli_free_result($resultado);
